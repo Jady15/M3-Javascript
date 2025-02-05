@@ -35,3 +35,21 @@ console.log(10 * "Isaac");
 /*---------------------------- 
     EJERCICIOS DE CAMPUS
 ----------------------------*/
+console.log("EJERCICIOS DE CAMPUS");
+console.log(typeof(42));
+console.log(typeof('Veinticinco'));
+console.log(typeof(-666));
+console.log(typeof(true));
+console.log(typeof(0));
+console.log(typeof(''));
+console.log(typeof(null));
+console.log(typeof(undefined));
+console.log(typeof(FALSE));
+console.log();
+
+console.log("MIS EJEMPLOS");
+console.log(typeof(10 < 3));
+console.log(typeof("Hola" + "Mundo"));
+console.log(typeof(700.5));
+console.log(typeof(1 + '1'));
+console.log(typeof(1 - '1'));
