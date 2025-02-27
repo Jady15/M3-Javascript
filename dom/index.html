@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica con DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Hola mundo!</h1>
+
+    <!-- Selección de DOM mediante ID -->
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+
+    <!-- Selección de DOM mediante clase -->
+     <p class="texto">Este es el primer párrafo</p>
+     <p class="texto">Este es el segundo párrafo</p>
+     <p class="texto">Este es el tercer párrafo</p>
+     <button onclick="cambiarColorParrafos()">Cambiar color</button>
+
+     <hr>
+
+     <!-- Selección por etiqueta -->
+      <p>Hola, soy un párrafo</p>
+      <p>Hola, yo también lo soy :D</p>
+
+      <button onclick="ocultarParrafo()">Oculta el segundo párrafo</button>
+
+      <hr>
+
+      <!-- Usando querySelector -->
+      <div>
+        <p>Mi perro se llama Milaneso</p>
+      </div>
+
+      <p>Mi gato se llama Mantequilla</p>
+
+      <button onclick="cambiarTextoDiv()">Cambiar texto dentro de DIV</button>
+
+      <hr>
+
+      <!-- Usando querySelectorAll -->
+       <ul>
+        <li>Cosito 1</li>
+        <li>Cosito 2</li>
+        <li>Cosito 3</li>
+       </ul>
+
+       <button onclick="marcarCositos()">Marcar items (cositos)</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
