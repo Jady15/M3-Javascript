@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Delicias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabecera con barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="menu-inicio">Inicio</a></li>
+                <li><a href="#" id="menu-productos">Menú</a></li>
+                <li><a href="#" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section id="inicio">
+            <h2>¡Bienvenido/a a nuestra pastelería!</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deleniti dolores quasi, cupiditate at commodi. Sunt, pariatur totam hic magnam voluptatum quibusdam! Repudiandae architecto, maiores nam ratione nobis quo vitae!</p>
+        </section>
+
+        <!-- Sección Productos -->
+        <section id="productos" style="display:none;">
+            <h2>¡Prueba nuestros deliciosos productos!</h2>
+            <!-- Lista de productos -->
+            <div id="lista-productos">
+                <!-- Tarjeta de producto-->
+                <div class="producto">
+                    <h3>Pastel de Chocolate</h3>
+                    <p>Delicioso pastel de chocolate, con cobertura de frutas</p>
+                    <button class="agregar-carrito" data-nombre="Pastel de chocolate" data-precio="250">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Pastel de Fresa</h3>
+                    <p>Pastel con sabor fresas con crema</p>
+                    <button class="agregar-carrito" data-nombre="Pastel de fresa" data-precio="250">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <h3>Pastel de Vainilla</h3>
+                    <p>Pastel tipo tres leches con sabor a vainilla</p>
+                    <button class="agregar-carrito" data-nombre="Pastel de vainilla" data-precio="250">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- Carrito de compras -->
+            <div id="carrito">
+                <h2>Mi Carrito</h2>
+                <ul id="lista-carrito"></ul>
+                <p>Total: $<span id="total-carrito">0</span></p>
+            </div>
+        </section>
+        <!-- Sección Contacto -->
+        <section id="contacto" style="display:none">
+            <h2>Contáctanos</h2>
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" reqiured></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="mensaje-enviado" style="display:none">
+                <p>¡Gracias! Mensaje enviado :D</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
