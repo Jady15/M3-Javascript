@@ -5,12 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const commentContainer = document.getElementById("comment-container");
 
     let commentList = [];  // Lista de comentarios
-    let commentId = 1; // ID inicial
+    let commentId; // ID inicial
+    initializeCommentId();  // Inicializa el ID del próximo comentario 
     showComments(); // Muestra los comentarios actuales en pantalla
+
+    // Inicializar el ID de comentario basado en localStorage
+    function initializeCommentId() {
+        commentList = JSON.parse(localStorage.getItem("commentList")) || [];
+        if (commentList.length === 0) {
+            commentId = 1; // Si no hay comentarios, empieza en 1
+        } else {
+            // Encuentra el ID más alto y suma 1
+            commentId = Math.max(...commentList.map(comment => comment.id)) + 1;
+        }
+    }
 
     // Mostrar comentarios en pantalla
     function showComments() {
         commentContainer.innerHTML = "";    // Se limpia toda la sintaxis del contenedor de comentarios
+
+        commentList = JSON.parse(localStorage.getItem("commentList")) || [] ;
 
         if (commentList.length === 0){
             const noCommentsDiv = document.createElement("div");
@@ -92,6 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
         commentId++;
         commentList.push(newComment);   // Inserta el nuevo comentario al arreglo
 
+        localStorage.setItem("commentList", JSON.stringify(commentList));
+
         showComments(); // Cargar la lista de comentarios
     }
 
@@ -105,6 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 break;  // Salir del ciclo for cuando ya se haya eliminado el elemento de la lista
             }
         }
+        localStorage.setItem("commentList", JSON.stringify(commentList));
+
         showComments(); // Cargar la lista de comentarios
     }
 
